@@ -13,7 +13,7 @@ const About = () => {
           <img src="https://via.placeholder.com/300" alt="About Me" />
         </div>
         <div className="about-text">
-          <h2>Hi, I'm Shaily Tyagi</h2>
+          <h2>Hi, I'm User Sharma</h2>
           <p>
             I'm a passionate photographer and artist, driven by a desire to
             capture the beauty of the world around us. My gallery showcases a
