@@ -1,0 +1,379 @@
+/* General Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navbar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 30px;
+    color: #111;
+}
+
+.nav {
+    display: flex;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ff6f61;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin-left: 15px;
+    color: #444;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ff6f61;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        gap: 20px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        transform: translateY(-100%);
+        border-top: 1px solid #ddd;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .nav.nav-open {
+        transform: translateY(0);
+        display: flex;
+        opacity: 1;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .social-icons {
+        display: none;
+        position: absolute;
+        top: 70px;
+        /* Adjusted to align below nav */
+        left: 100px;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+        transform: translateY(-100%);
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .social-icons.social-icons-open {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Landing Page Section */
+.landing-page {
+    margin-inline: 10px;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: #111;
+    background: linear-gradient(120deg, #ff6f61, #ffc107);
+    overflow: hidden;
+    border-radius: 20px;
+    height: 60vh;
+    position: relative;
+}
+
+.landing-page .content h4 {
+    font-size: 18px;
+    color: #f9f9f9;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.landing-page .content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.landing-page .content h3 {
+    font-size: 24px;
+    color: #fefefe;
+    margin-bottom: 20px;
+}
+
+.landing-page .download-btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 1;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing-page .download-btn:hover {
+    background: #ff6f61;
+}
+
+/* Background Images (Bento-style grid) */
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bento-bg {
+    position: absolute;
+    opacity: 0.3;
+    /* Low opacity for background effect */
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bento-bg-1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 20%;
+}
+
+.bento-bg-2 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 10%;
+}
+
+.bento-bg-3 {
+    width: 350px;
+    height: 300px;
+    top: 10%;
+    left: 70%;
+}
+
+.bento-bg-4 {
+    width: 300px;
+    height: 150px;
+    top: 70%;
+    left: 60%;
+}
+
+.bento-bg:hover {
+    opacity: 0.9;
+    /* Slightly increase visibility on hover */
+    transform: scale(1.05);
+}
+
+/* Background Shapes (no changes) */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Background Shapes */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    animation: float 6s infinite ease-in-out;
+    border-radius: 50%;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 15%;
+    background: #ff6f61;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 140px solid #ffc107;
+    top: 30%;
+    left: 70%;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    top: 70%;
+    left: 20%;
+    background: #6c63ff;
+}
+
+.ellipse {
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    background: #e14eca;
+    border-radius: 50%;
+}
+
+/* Image Section (Bento Grid) */
+.image-section {
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.bento-grid h1 {
+    text-align: center;
+    overflow: hidden;
+}
+
+.bento-grid h1 span {
+    color: #ff6f61;
+}
+
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.bento-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-item.wide {
+    grid-column: span 2;
+}
+
+.bento-item.tall {
+    grid-row: span 2;
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover img {
+    transform: scale(1.1);
+}
+
+.bento-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.more-btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    margin-inline: 45%;
+}
+
+.more-btn:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
