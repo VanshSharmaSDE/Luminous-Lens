@@ -4,6 +4,7 @@ import './Dashboard.css';
 import Footer from './Footer';
 
 const Dashboard = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [imageFile, setImageFile] = useState(null);
