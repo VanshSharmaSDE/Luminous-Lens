@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <h3 className="animated-name">Shaily Tyagi</h3>
+        <h3 className="animated-name">User Sharma</h3>
         <p className="footer-text">Web Developer | Creative Thinker | Artist</p>
         <div className="social-icons">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
