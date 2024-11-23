@@ -24,7 +24,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/users/login', credentials);
+      const res = await axios.post(`${apiUrl}/users/login`, credentials);
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard');
     } catch (err) {
