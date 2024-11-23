@@ -57,7 +57,7 @@ const LandingPage = () => {
         </div>
         <div className="content">
           <h4>Hello, I'm</h4>
-          <h1>Shaily Tyagi</h1>
+          <h1>User Sharma</h1>
           <h3>Owner of Luminous Lens</h3>
           <button className="download-btn" onClick={() => navigate('/gallery')}>Get Started</button>
         </div>
