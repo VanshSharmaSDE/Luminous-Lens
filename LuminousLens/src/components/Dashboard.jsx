@@ -31,7 +31,7 @@ const Dashboard = () => {
 
   const fetchImages = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/images');
+      const res = await axios.get(`${apiUrl}/images`);
       setImages(res.data);
     } catch (err) {
       console.error(err);
@@ -40,7 +40,7 @@ const Dashboard = () => {
 
   const fetchMessages = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/messages');
+      const res = await axios.get(`${apiUrl}/messages`);
       setMessages(res.data);
     } catch (err) {
       console.error(err);
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/blogs');
+      const res = await axios.get(`${apiUrl}/blogs`);
       setBlogs(res.data);
     } catch (err) {
       console.error(err);
@@ -64,7 +64,7 @@ const Dashboard = () => {
     formData.append('image', imageFile);
 
     try {
-      await axios.post('http://localhost:5000/images/upload', formData, {
+      await axios.post(`${apiUrl}/images/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -87,7 +87,7 @@ const Dashboard = () => {
     formData.append('image', blogImage);
 
     try {
-      await axios.post('http://localhost:5000/blogs/upload', formData, {
+      await axios.post(`${apiUrl}/blogs/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -104,7 +104,7 @@ const Dashboard = () => {
 
   const handleDeleteImages = async () => {
     try {
-      await axios.post('http://localhost:5000/images/delete', { ids: selectedImages });
+      await axios.post(`${apiUrl}/images/delete`, { ids: selectedImages });
       alert('Images deleted');
       setSelectedImages([]);
       setIsDeletePopupVisible(false);
@@ -116,7 +116,7 @@ const Dashboard = () => {
 
   const handleDeleteMessages = async () => {
     try {
-      await axios.post('http://localhost:5000/messages/delete', { ids: selectedMessages });
+      await axios.post(`${apiUrl}/messages/delete`, { ids: selectedMessages });
       alert('Messages deleted');
       setSelectedMessages([]);
       setIsMessagesPopupVisible(false);
@@ -128,7 +128,7 @@ const Dashboard = () => {
 
   const handleDeleteBlogs = async () => {
     try {
-      await axios.post('http://localhost:5000/blogs/delete', { ids: selectedBlogs });
+      await axios.post(`${apiUrl}/blogs/delete`, { ids: selectedBlogs });
       alert('Blogs deleted');
       setSelectedBlogs([]);
       setIsBlogsPopupVisible(false);
