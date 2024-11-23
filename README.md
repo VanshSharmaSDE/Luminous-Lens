@@ -1,4 +1,4 @@
-# 🎨 LuminousLens Admin Dashboard 🚀
+# 🎨 LuminousLens 🚀
 
 ![LuminousLens Banner](https://unsplash.com/photos/a-laptop-with-a-broken-keyboard-and-a-broken-camera-z1YJCZ-yV2Q)
 
