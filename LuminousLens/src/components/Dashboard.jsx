@@ -202,7 +202,7 @@ const Dashboard = () => {
         </div>
         <div className={`social-icons ${isMenuOpen ? 'social-icons-open' : ''}`}>
           <i className="ri-instagram-line"></i>
-          <i className="ri-github-line" onClick={() => navigateTo('https://github.com/ShailyTyagi013')}></i>
+          <i className="ri-github-line" onClick={() => navigateTo('https://github.com/')}></i>
           <i className="ri-logout-box-r-line" onClick={() => logout()}></i>
         </div>
       </header>
