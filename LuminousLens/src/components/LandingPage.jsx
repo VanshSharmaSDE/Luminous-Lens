@@ -35,7 +35,7 @@ const LandingPage = () => {
         </div>
         <div className={`social-icons ${isMenuOpen ? 'social-icons-open' : ''}`}>
           <i className="ri-instagram-line"></i>
-          <i className="ri-github-line" onClick={()=>navigateTo('https://github.com/ShailyTyagi013')}></i>
+          <i className="ri-github-line" onClick={()=>navigateTo('https://github.com/VanshSharmaSDE')}></i>
           <i className="ri-user-3-line" onClick={() => navigate('/login')}></i>
         </div>
       </header>
