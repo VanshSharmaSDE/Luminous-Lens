@@ -25,7 +25,7 @@ const LandingPage = () => {
         <div className="left-section">
           <div className="logo">LuminousLens</div>
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-            <Link to="/gallery"}>Gallery</Link>
+            <Link to="/gallery">Gallery</Link>
             <Link to="/blog">Blog</Link>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
