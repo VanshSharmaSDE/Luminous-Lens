@@ -5,6 +5,7 @@ import Contact from './Contact';
 import "remixicon/fonts/remixicon.css"; // Ensure Remix icons are installed and imported
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -24,8 +25,8 @@ const LandingPage = () => {
         <div className="left-section">
           <div className="logo">LuminousLens</div>
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-            <a href="" onClick={() => navigate('/gallery')}>Gallery</a>
-            <a href="" onClick={() => navigate('/blog')}>Blog</a>
+            <Link to="/gallery"}>Gallery</Link>
+            <Link to="/blog">Blog</Link>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </nav>
